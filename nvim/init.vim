@@ -47,7 +47,7 @@ set splitright
 " Enable spell checking
 set spell
 " Define languages to spell check
-set spelllang=en_gb,en_us,nl
+set spelllang=en_gb,en_us,nl,pt
 " Define tabs to be 4 spaces
 set shiftwidth=4
 set tabstop=8
