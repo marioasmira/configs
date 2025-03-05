@@ -17,8 +17,10 @@ lua require('config')
 set number
 " Displays non-focus line numbers relative to focus
 set relativenumber
-" Displays a line under the focus line
+" Displays a line under the focus line. The option highlights only the number
+" of the line
 set cursorline
+set cursorlineopt=number
 " Connects the clipboard inside and outside neovim
 set clipboard=unnamedplus
 " Highlights the search terms and leaves them highlighted afterwards
@@ -26,8 +28,6 @@ set clipboard=unnamedplus
 set hlsearch
 " Allows commands to be case insensitive
 set ignorecase
-" Overwrites ignorecase if there are upper case letter in command
-set smartcase
 " Changes the behavior of backspace to the defined terms
 set backspace=indent,eol,start
 " Shows the ruler on the bottom left (coordinates)
@@ -53,6 +53,13 @@ set shiftwidth=4
 set tabstop=8
 set softtabstop=4
 set noexpandtab
+" Defines the line breaks to happen in white spaces leaving words intact
+set linebreak
+" Compatibility options: text wrapped lines use the columns for line numbers
+" Doesn't seem to be working?
+set cpoptions+="n"
+" Character string to display when the line is wrapped
+let &showbreak="> "
 
 " NvimTree --------------------------------------------------------
 " Ctrl+n to toggle the file structure
