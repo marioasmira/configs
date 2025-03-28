@@ -8,7 +8,7 @@ then
 	    rsync -ur ~/.config/nvim/ nvim
 	    ;;
 	bash)
-	    rsync -ur ~/.bash_aliases .
+	    rsync -ur ~/.bash_aliases bash
 	    ;;
 	*)
 	    echo -n "The second argument needs to specify the configuration files to back up."
@@ -21,7 +21,7 @@ elif [[ $1 == "refresh" ]]; then
 	    rsync -ur nvim/ ~/.config/nvim
 	    ;;
 	bash)
-	    rsync -ur .bash_aliases ~
+	    rsync -ur bash/ ~
 	    ;;
 	*)
 	    echo -n "The second argument needs to specify the configuration files to refresh."
