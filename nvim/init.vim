@@ -1,5 +1,5 @@
 " Plugin section ----------------------------------------------
-
+"
 " listing plugins
 call plug#begin()
 Plug 'lervag/vimtex', { 'tag': 'v2.15' } 		" specific version due to neovim v0.9
@@ -7,6 +7,7 @@ Plug 'nvim-tree/nvim-web-devicons' 			" optional icons for nvim-tree
 Plug 'nvim-tree/nvim-tree.lua'				" to show the file structure
 Plug 'akinsho/toggleterm.nvim', {'tag' : 'v2.13.1'}	" toggles the terminal (specific version so it doesn't break)
 Plug 'lewis6991/gitsigns.nvim'				" to show the file changes when using git
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }		" color schemes
 call plug#end()
 
 " Loading the file in 'lua/config.lua'
@@ -61,6 +62,10 @@ set linebreak
 set cpoptions+="n"
 " Character string to display when the line is wrapped
 let &showbreak="> "
+
+" Sets the default colour scheme
+" Can be changed in neovim by re-setting it to light
+set background=dark
 
 " NvimTree --------------------------------------------------------
 " Ctrl+n to toggle the file structure

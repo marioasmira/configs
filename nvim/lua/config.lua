@@ -48,3 +48,13 @@ end
 
 -- if you only want these mappings for toggle term use term://*toggleterm#* instead
 vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
+
+require("catppuccin").setup({
+    background = { -- :h background
+        light = "latte",
+        dark = "mocha",
+    },
+})
+
+-- setup must be called before loading
+vim.cmd.colorscheme "catppuccin"
