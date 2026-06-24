@@ -8,6 +8,7 @@ Plug 'nvim-tree/nvim-tree.lua'				" to show the file structure
 Plug 'akinsho/toggleterm.nvim', {'tag' : 'v2.13.1'}	" toggles the terminal (specific version so it doesn't break)
 Plug 'lewis6991/gitsigns.nvim'				" to show the file changes when using git
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' }		" color schemes
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 call plug#end()
 
 " Loading the file in 'lua/config.lua'
